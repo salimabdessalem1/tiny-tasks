@@ -1,0 +1,10 @@
+CREATE TABLE users (
+   id VARCHAR(36) CONSTRAINT user_id PRIMARY KEY,
+   username VARCHAR (128) NOT NULL,
+   password VARCHAR (128) NOT NULL,
+   email VARCHAR (128) NOT NULL
+);
+
+ALTER TABLE task ADD user_id VARCHAR(36);
+ALTER TABLE task ADD FOREIGN KEY (user_id) REFERENCES users(id);
+ALTER TABLE task ADD status VARCHAR(20);

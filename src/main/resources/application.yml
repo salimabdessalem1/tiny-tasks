@@ -3,6 +3,20 @@ spring:
     url: jdbc:postgresql://localhost:5432/tiny_task
     username: tiny_task
     password: demo123
+  spring:
+    flyway:
+      enabled: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: replayno421@gmail.com
+    password: tcxjhxjhtltogyhg
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQL95Dialect
@@ -12,3 +26,4 @@ spring:
 logging:
   level:
     com.coyoapp.tinytask: DEBUG
+
