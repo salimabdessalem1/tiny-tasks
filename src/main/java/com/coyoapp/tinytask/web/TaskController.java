@@ -28,7 +28,7 @@ class TaskController {
 
   @PostMapping
   public TaskResponse createTask(@RequestBody @Valid TaskRequest taskRequest) {
-    log.debug("createTask(createTask={})", taskRequest);
+    log.debug("createUser(createUser={})", taskRequest);
     return taskService.createTask(taskRequest);
   }
 

@@ -1,21 +1,24 @@
 package com.coyoapp.tinytask.dto;
 
-import javax.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotEmpty;
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TaskRequest {
+public class UserRequest {
 
   @NotEmpty
-  private String name;
+  private String username;
 
   @NotEmpty
-  private String userId;
+  private String password;
 
+  @NotEmpty
+  private String email;
 }
